@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Install Graphviz                                                         │
-      run: |                                                                         │
-         sudo apt-get update                                                          │
+    - name: Install Graphviz                                                         
+      run: |                                                                         
+         sudo apt-get update                                                          
          sudo apt-get install -y graphviz libgraphviz-dev 
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
