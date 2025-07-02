@@ -1,11 +1,9 @@
 # agents/notewriter_agent.py
 import json
-from typing import Dict, Any, List
-from langgraph.graph import StateGraph, END, START
+from typing import Dict, Any
+from langgraph.graph import StateGraph, END
 
 from core.react_agent import ReActAgent
-from core.state import AcademicState
-from config.llm_config import YourLLM
 
 class NoteWriterAgent(ReActAgent):
     def __init__(self, llm_instance: Any):

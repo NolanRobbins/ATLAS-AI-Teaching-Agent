@@ -1,9 +1,6 @@
 # agents/coordinator_agent.py
 import json
-from typing import Dict, List, Any
-from langchain_core.messages import HumanMessage # If AcademicState uses this type directly
-from core.state import AcademicState
-from config.llm_config import YourLLM
+from typing import Dict, Any
 
 # Assuming AcademicState and YourLLM are passed in context or imported locally
 # from core.state import AcademicState

@@ -54,7 +54,7 @@ class YourLLM:
             await self.agenerate(test_message, temperature=0.1)
             self._is_authenticated = True
             return True
-        except Exception as e:
+        except Exception:
             # st.error(f'Authentication Failed: {str(e)}') # Use st.error if in Streamlit context
             return False
 

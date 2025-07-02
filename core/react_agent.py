@@ -1,9 +1,6 @@
-import json
 from typing import List, Dict, Optional, Any
-from pydantic import BaseModel, Field
-from datetime import datetime, timezone, timedelta
-from core.state import AcademicState
-from config.llm_config import YourLLM
+from pydantic import BaseModel
+from datetime import datetime, timezone
 
 # Assuming AcademicState is imported from core.state
 # from core.state import AcademicState # No, this should be passed as argument
@@ -34,7 +31,6 @@ class ReActAgent:
     async def search_calendar(self, state: Dict) -> List[Dict]: # Use Dict for state type hinting for now
         events = state['calendar'].get("events", [])
         now = datetime.now(timezone.utc)
-        future = now + timedelta(days=7)
         return [e for e in events if datetime.fromisoformat(e['start']['dateTime']) > now]
 
     async def analyze_tasks(self, state: Dict) -> List[Dict]:

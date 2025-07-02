@@ -1,11 +1,10 @@
 from langgraph.graph import StateGraph, END, START
-from typing import List, Dict, Any, Union, Literal
+from typing import List, Dict, Union, Literal
 
 # Import components
-from core.state import AcademicState, dict_reducer
+from core.state import AcademicState
 from config.llm_config import YourLLM
-from data.data_manager import DataManager
-from agents.coordinator_agent import coordinator_agent, analyze_context, parse_coordinator_response
+from agents.coordinator_agent import coordinator_agent
 from agents.planner_agent import PlannerAgent
 from agents.notewriter_agent import NoteWriterAgent
 from agents.advisor_agent import AdvisorAgent

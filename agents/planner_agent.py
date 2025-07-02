@@ -1,12 +1,10 @@
 # agents/planner_agent.py
 import json
-from typing import Dict, List, Any
+from typing import Dict, Any
 from datetime import datetime, timezone, timedelta
-from langgraph.graph import StateGraph, END, START # Import START here if it's used in subgraphs
+from langgraph.graph import StateGraph, END # Import START here if it's used in subgraphs
 
 from core.react_agent import ReActAgent
-from core.state import AcademicState # Will be passed as argument
-from config.llm_config import YourLLM # Will be passed as argument
 
 class PlannerAgent(ReActAgent):
     def __init__(self, llm_instance: Any):

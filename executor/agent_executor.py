@@ -1,7 +1,5 @@
 import asyncio
-from typing import Dict, Any, List
-from core.state import AcademicState # Will be passed as argument
-from config.llm_config import YourLLM # Will be passed as argument
+from typing import Dict, Any
 from agents.planner_agent import PlannerAgent
 from agents.notewriter_agent import NoteWriterAgent
 from agents.advisor_agent import AdvisorAgent
